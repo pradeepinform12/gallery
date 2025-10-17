@@ -12,7 +12,7 @@ export default function Home() {
 
   const fetchCards = async () => {
     try {
-      const res = await fetch('http://localhost:5000/api/cards');
+      const res = await fetch('https://gallerybackend-3o4k.onrender.com/api/cards');
       const data = await res.json();
       setCards(data);
     } catch (err) {

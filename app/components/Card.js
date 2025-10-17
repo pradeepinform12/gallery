@@ -10,7 +10,7 @@ export default function Card({ card }) {
       {card._id && (
         <div className="mt-2 w-full h-64 relative rounded overflow-hidden">
           <Image
-            src={`http://localhost:5000/api/cards/${card._id}/image`}
+            src={`https://gallerybackend-3o4k.onrender.com/api/cards/${card._id}/image`}
             alt={card.title}
             fill
             style={{ objectFit: 'cover' }}

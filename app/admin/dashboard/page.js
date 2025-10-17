@@ -22,7 +22,7 @@ export default function Dashboard() {
   // ---------------- FETCH CARDS ----------------
   const fetchCards = async () => {
     try {
-      const res = await fetch('http://localhost:5000/api/cards', {
+      const res = await fetch('https://gallerybackend-3o4k.onrender.com/api/cards', {
         headers: { Authorization: `Bearer ${token}` },
       });
       const data = await res.json();
@@ -42,8 +42,8 @@ export default function Dashboard() {
 
     try {
       const url = editId
-        ? `http://localhost:5000/api/cards/${editId}`
-        : 'http://localhost:5000/api/cards';
+        ? `https://gallerybackend-3o4k.onrender.com/api/cards/${editId}`
+        : 'https://gallerybackend-3o4k.onrender.com/api/cards';
       const method = editId ? 'PUT' : 'POST';
 
       const res = await fetch(url, {
@@ -79,7 +79,7 @@ export default function Dashboard() {
   const handleDelete = async (id) => {
     if (!confirm('Are you sure you want to delete this card?')) return;
     try {
-      const res = await fetch(`http://localhost:5000/api/cards/${id}`, {
+      const res = await fetch(`https://gallerybackend-3o4k.onrender.com/api/cards/${id}`, {
         method: 'DELETE',
         headers: { Authorization: `Bearer ${token}` },
       });
@@ -147,7 +147,7 @@ export default function Dashboard() {
               {card._id && (
                 <div className="mt-2 w-full h-40 relative rounded overflow-hidden">
                   <img
-                    src={`http://localhost:5000/api/cards/${card._id}/image`}
+                    src={`https://gallerybackend-3o4k.onrender.com/api/cards/${card._id}/image`}
                     alt={card.title}
                     className="w-full h-full object-cover rounded"
                   />
