@@ -36,12 +36,12 @@ export default function Login() {
         onSubmit={handleLogin}
         className="bg-white p-8 rounded-xl shadow-md w-80 space-y-4"
       >
-        <h2 className="text-2xl font-semibold text-center">Admin Login</h2>
+        <h2 className="text-2xl font-semibold text-black text-center">Admin Login</h2>
 
         <input
           type="email"
           placeholder="Admin Email"
-          className="border border-gray-300 p-2 w-full rounded-md"
+          className="border text-black border-gray-300 p-2 w-full rounded-md"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
@@ -49,7 +49,7 @@ export default function Login() {
         <input
           type="password"
           placeholder="Password"
-          className="border border-gray-300 p-2 w-full rounded-md"
+          className="border text-black border-gray-300 p-2 w-full rounded-md"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
